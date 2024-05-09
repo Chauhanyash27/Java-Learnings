@@ -48,12 +48,12 @@ public class ImplicitTypeCasting {
 
     public static void main(String[] args) {
 
-        ImplicitTypeCasting ob1 = new ImplicitTypeCasting();
+        ImplicitTypeCasting itc_obj = new ImplicitTypeCasting();
 
-        ob1.byteToInt();
-        ob1.shortToInt();
-        ob1.intToFloat();
-        ob1.charToInt();
-        ob1.longToDouble();
+        itc_obj.byteToInt();
+        itc_obj.shortToInt();
+        itc_obj.intToFloat();
+        itc_obj.charToInt();
+        itc_obj.longToDouble();
     }
 }
