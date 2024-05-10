@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class AssignmentOperators {
+public class AssignmentOperators {
+
+
+    public static void main(String[] args) {
+
+    }
 }
