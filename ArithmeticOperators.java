@@ -48,12 +48,12 @@ public class ArithmeticOperators {
     }
 
     public static void main(String[] args){
-        ArithmeticOperators Add_obj = new ArithmeticOperators();
-        Add_obj.addition();
-        Add_obj.subtraction();
-        Add_obj.multiplication();
-        Add_obj.division();
-        Add_obj.modulus();
+        ArithmeticOperators Arithmetic_obj = new ArithmeticOperators();
+        Arithmetic_obj.addition();
+        Arithmetic_obj.subtraction();
+        Arithmetic_obj.multiplication();
+        Arithmetic_obj.division();
+        Arithmetic_obj.modulus();
     }
 
 }
