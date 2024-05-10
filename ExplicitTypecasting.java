@@ -44,12 +44,12 @@ public class ExplicitTypecasting {
 
     public static void main(String[] args) {
 
-        ExplicitTypecasting ob1 = new ExplicitTypecasting();
-        ob1.floatToInt();
-        ob1.intToByte();
-        ob1.doubleToByte();
-        ob1.floatToChar();
-        ob1.longToInt();
+        ExplicitTypecasting etc_obj = new ExplicitTypecasting();
+        etc_obj.floatToInt();
+        etc_obj.intToByte();
+        etc_obj.doubleToByte();
+        etc_obj.floatToChar();
+        etc_obj.longToInt();
     }
 }
 
