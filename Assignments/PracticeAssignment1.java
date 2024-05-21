@@ -6,15 +6,15 @@ public class PracticeAssignment1 {
     // Question 2
     static void userStringAnalysis(String userInput) {
 
-        // Count the number of characters in the string.
+        // Count the number of characters in the string
         System.out.println("Number of characters in the string are: " + userInput.length());
 
 
         // Determine if the string starts with a vowel.
         boolean check = false;
-        userInput = userInput.toLowerCase();
-        if(userInput.charAt(0) =='a' || userInput.charAt(0) =='e' || userInput.charAt(0) =='i' || userInput.charAt(0) =='o'
-                || userInput.charAt(0) =='u') check=true;
+        if ("aeiou".indexOf(Character.toLowerCase(userInput.charAt(0))) != -1) {
+            check = true;
+        }
         System.out.println("Does the string start with a vowel: " + check);
 
 
@@ -34,34 +34,34 @@ public class PracticeAssignment1 {
     static void factorialOf7(){
 
         // Write a program to find the factorial of 7 using a while loop.
-        int num=7;
+        int factorialNum =7;
         int i=6;
         while(i>0){
-            num*=i;
+            factorialNum *=i;
             i--;
         }
-        System.out.println("7! = 7*6*5*4*3*2*1 is " +num);
+        System.out.println("7! = 7*6*5*4*3*2*1 is " + factorialNum);
     }
 
     // Question 4
     static void pascalTriangle(int rows){
 
         // Write a program to print Pascal's triangle up to a specified number of rows.
-        int arr[][] = new int[rows][rows];
+        int dataArray[][] = new int[rows][rows];
         int value=1;
         for(int i=0;i<rows;i++){
             for(int j=0;j<=i;j++){
                 if(i==j || j==0){
-                    arr[i][j]=1;
+                    dataArray[i][j]=1;
                 } else {
-                    value=arr[i-1][j-1]+arr[i-1][j];
-                    arr[i][j]=value;
+                    value=dataArray[i-1][j-1]+dataArray[i-1][j];
+                    dataArray[i][j]=value;
                 }
             }
         }
         for(int i=0;i<rows;i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print(arr[i][j]+" ");
+                System.out.print(dataArray[i][j]+" ");
             }
             System.out.print("\n");
         }
@@ -73,13 +73,13 @@ public class PracticeAssignment1 {
     static void armstrongNumber(String userInput){
 
         // Write a Java program to check whether a given number is an Armstrong number or not using a while loop.
-        int sum = 0;
+        int sumOfDigits = 0;
         for (int i = 0; i < userInput.length(); i++) {
             char dig = userInput.charAt(i);
             int num = Character.getNumericValue(dig);
-            sum += (num * num * num);
+            sumOfDigits += (num * num * num);
         }
-        String finalSum = Integer.toString(sum);
+        String finalSum = Integer.toString(sumOfDigits);
         if (finalSum.equals(userInput)) System.out.println("Yes! Entered number is an Armstrong Number");
         else {
             System.out.println("No! Entered number is not an armstrong number");
@@ -90,18 +90,18 @@ public class PracticeAssignment1 {
     static void arrayReverse(){
 
         // Write a program to reverse an array of integers without using any additional array.
-        int arr[]={1,2,3,4,5,6,7,8,9};
-        int length= arr .length;
+        int initialArr[]={1,2,3,4,5,6,7,8,9};
+        int length= initialArr.length;
 
         for(int i=0;i<length/2;i++){
             int aux_value=0;
 
-            aux_value=arr[i];
-            arr[i]=arr[length-1-i];
-            arr[length-i-1]=aux_value;
+            aux_value= initialArr[i];
+            initialArr[i]= initialArr[length-1-i];
+            initialArr[length-i-1]=aux_value;
         }
         System.out.println("The reverse of array 1,2,3,4,5,6,7,8,9 is: ");
-        for(int i :arr)
+        for(int i : initialArr)
             System.out.print(i+" ");
     }
 
@@ -110,15 +110,14 @@ public class PracticeAssignment1 {
 
         // a method named isPalindrome that takes a string as input and returns true if the string is a palindrome
         // (reads the same backward as forward), otherwise returns false.
-        int flag=1;
-        int length=palindromeCheck.length()-1;
-        for(int i=0;i<length;i++){
-            if(palindromeCheck.charAt(i)!=palindromeCheck.charAt(length-i)){
-                flag=0;break;
-            }
-        }
-        if(flag==0) return false;
-        else return true;
+
+        StringBuilder builderString = new StringBuilder(palindromeCheck);
+        builderString.reverse();
+
+        if (palindromeCheck.equals(builderString.toString()))
+            return true;
+        else return false;
+
     }
 
     // Question 8
@@ -162,32 +161,32 @@ public class PracticeAssignment1 {
 
         Scanner input = new Scanner(System.in);
 
-       // Question 2 method call
-       System.out.println("Enter a string:");
-       String inputString = input.nextLine();
-       userStringAnalysis(inputString);
+        // Question 2 method call
+        System.out.println("Enter a string:");
+        String inputString = input.nextLine();
+        userStringAnalysis(inputString);
 
-       // Question 3 method call
-       factorialOf7();
+        // Question 3 method call
+        factorialOf7();
 
-       // Question 4 method call
-       System.out.println("Enter the number of rows for pascal triangle: ");
-       int rows = input.nextInt();
-       pascalTriangle(rows);
+        // Question 4 method call
+        System.out.println("Enter the number of rows for pascal triangle: ");
+        int rows = input.nextInt();
+        pascalTriangle(rows);
 
-       //Question 5 method call
-       System.out.println("Enter a integer number");
-       String userInput = input.nextLine();
-       armstrongNumber(userInput);
+        //Question 5 method call
+        System.out.println("Enter a integer number");
+        String userInput = input.nextLine();
+        armstrongNumber(userInput);
 
-       // Question 6 method call
-       arrayReverse();
+        // Question 6 method call
+        arrayReverse();
 
-       // Question 7 method call
-       System.out.println("Enter a string:");
-       String palindromeCheck = input.nextLine();
-       boolean result = isPalindrome(palindromeCheck);
-       System.out.println("Is the entered string palindrome: "+result);
+        // Question 7 method call
+        System.out.println("Enter a string:");
+        String palindromeCheck = input.nextLine();
+        boolean result = isPalindrome(palindromeCheck);
+        System.out.println("Is the entered string palindrome: "+result);
 
          // Question 8 method call
         diamondPattern();
