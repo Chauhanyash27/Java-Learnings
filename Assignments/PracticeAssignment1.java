@@ -162,32 +162,32 @@ public class PracticeAssignment1 {
 
         Scanner input = new Scanner(System.in);
 
-//        // Question 2 method call
-//        System.out.println("Enter a string:");
-//        String inputString = input.nextLine();
-//        userStringAnalysis(inputString);
-//
-//        // Question 3 method call
-//        factorialOf7();
+       // Question 2 method call
+       System.out.println("Enter a string:");
+       String inputString = input.nextLine();
+       userStringAnalysis(inputString);
 
-        // Question 4 method call
-//        System.out.println("Enter the number of rows for pascal triangle: ");
-//        int rows = input.nextInt();
-//        pascalTriangle(rows);
-////
-//        //Question 5 method call
-//        System.out.println("Enter a integer number");
-//        String userInput = input.nextLine();
-//        armstrongNumber(userInput);
-//
-//        // Question 6 method call
-//        arrayReverse();
-//
-//        // Question 7 method call
-//        System.out.println("Enter a string:");
-//        String palindromeCheck = input.nextLine();
-//        boolean result = isPalindrome(palindromeCheck);
-//        System.out.println("Is the entered string palindrome: "+result);
+       // Question 3 method call
+       factorialOf7();
+
+       // Question 4 method call
+       System.out.println("Enter the number of rows for pascal triangle: ");
+       int rows = input.nextInt();
+       pascalTriangle(rows);
+
+       //Question 5 method call
+       System.out.println("Enter a integer number");
+       String userInput = input.nextLine();
+       armstrongNumber(userInput);
+
+       // Question 6 method call
+       arrayReverse();
+
+       // Question 7 method call
+       System.out.println("Enter a string:");
+       String palindromeCheck = input.nextLine();
+       boolean result = isPalindrome(palindromeCheck);
+       System.out.println("Is the entered string palindrome: "+result);
 
          // Question 8 method call
         diamondPattern();
